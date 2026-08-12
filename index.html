@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Tagger</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Product Review Sentiment & Aspect Tagger</h1>
+    <p>Enter a customer review to analyze its sentiment and product aspects.</p>
+
+    <textarea id="reviewInput" placeholder="Example: The battery drains quickly, but the camera is amazing."></textarea>
+    <button id="analyzeButton">Analyze Review</button>
+
+    <section id="result" class="result hidden">
+      <h2>Analysis Result</h2>
+      <p><strong>Sentiment:</strong> <span id="sentiment"></span></p>
+      <p><strong>Confidence:</strong> <span id="confidence"></span>%</p>
+      <p><strong>Aspects:</strong> <span id="aspects"></span></p>
+    </section>
+    <section class="history-section">
+  <h2>Review History</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Review</th>
+        <th>Sentiment</th>
+        <th>Confidence</th>
+        <th>Aspects</th>
+      </tr>
+    </thead>
+
+    <tbody id="historyBody"></tbody>
+  </table>
+</section>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

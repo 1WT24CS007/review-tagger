@@ -1,0 +1,24 @@
+.result {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #eef2ff;
+}
+
+.hidden {
+  display: none;
+}
+positive {
+  color: #15803d;
+  font-weight: bold;
+}
+
+.negative {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.neutral {
+  color: #b45309;
+  font-weight: bold;
+}
